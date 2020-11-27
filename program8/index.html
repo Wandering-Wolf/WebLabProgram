@@ -1,0 +1,47 @@
+<!--input have to be taken using html since input can only be taken from the client and not the server-->
+<!--php is server-side-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8a(Calculator)</title>
+    <style>
+        div {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple Calculator</h1>
+    <form action="calculate.php" method="post">
+    <!--if get method is used, the inputs from the form, when submitted will be appended to the url-->
+    <!--get have disadvantages like it shows password in url and there is length limit for url-->
+    <!--post method will pass the input to the header(concept of IPv4)-->
+        <div>
+            <label for="first">First Operand: </label>
+            <!--since for is given, when we click on the label, the textbox will be in focus-->
+            <input id="first" type="text" name="op1" required pattern="[0-9]+[.][0-9]+" title="Numbers, Please!">
+        </div>
+        <div>
+            <label>Choose an operator: </label>
+            <input id="plus" type="radio" name="operator" value="+" required>
+            <label for="plus">Add(+)</label>
+            <input id="minus" type="radio" name="operator" value="-">
+            <label for="minus">Minus(-)</label>
+            <input id="multiply" type="radio" name="operator" value="*">
+            <label for="multiply">Multiply(*)</label>
+            <input id="divide" type="radio" name="operator" value="/">
+            <label for="divide">Divide(/)</label>
+        </div>
+        <div>
+            <label for="second">Second Operand: </label>
+            <!--since for is given, when we click on the label, the textbox will be in focus-->
+            <input id="second" type="text" name="op2" required pattern="[0-9.]+" title="Numbers, Please!">
+            <!--can give things like {10} if the input field is a mobile number-->
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,29 @@
+h1 {
+    color: green;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    display: block; /* to display in the next line */
+    color: red;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    color: darkblue;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+usn,name,college,branch,year_of_joining,email {
+    color: red;
+}
+email {
+    text-transform: none;
+}
+

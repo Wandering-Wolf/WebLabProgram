@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Program 3</title>
+</head>
+
+<style>
+    body {
+        text-align: center;
+    }
+</style>
+<script>
+    // function textAnimate(opt) {
+    //     if(opt == 'i')
+    //         document.getElementById("text").style.fontSize = "50pt";
+    //     if(opt == 'd')
+    //         document.getElementById("text").style.fontSize = "5pt";
+    //
+    // }
+
+    function  textAnimate() {
+        var fontSize = 5
+        var flip = false
+        document.getElementById("text").style.color = 'red'
+        document.getElementById("text").innerText = "TEXT GROWING"
+
+        var timer1 = setInterval(animate, 1000)
+        function animate() {
+            if(!flip) {
+                fontSize +=5
+                document.getElementById("text").style.fontSize = fontSize+"pt"
+            }
+            else {
+                fontSize -=5
+                document.getElementById("text").style.fontSize = fontSize+"pt"
+            }
+            if(fontSize == 50) {
+                flip = true
+                document.getElementById("text").style.color = 'blue'
+                document.getElementById("text").innerText = "TEXT SHRINKING"
+            }
+            if (fontSize == 5)
+                clearInterval(timer1)
+        }
+
+        // var timer2 = setInterval(animateDecrease, 100)
+        // function animateDecrease() {
+        //     fontSize -=5
+        //     document.getElementById("text").style.fontSize = fontSize+"pt"
+        //     if (fontSize == 10)
+        //         clearInterval(timer2)
+        // }
+    }
+
+    function  textAnimate1() {
+        var fontPosition = 5
+        var flip = false
+        document.getElementById("text").style.color = 'red'
+        document.getElementById("text").innerText = "TEXT GOING DOWN"
+        document.getElementById("text").style.position = 'fixed'
+        document.getElementById("text").style.left = fontPosition
+
+        var timer1 = setInterval(animate, 50)
+        function animate() {
+            if(!flip) {
+                fontPosition +=5
+                document.getElementById("text").style.left = fontPosition+"vw"
+            }
+            else {
+                fontPosition -=5
+                document.getElementById("text").style.left = fontPosition+"vw"
+            }
+            if(fontPosition == 100) {
+                flip = true
+                document.getElementById("text").style.color = 'blue'
+                document.getElementById("text").innerText = "TEXT GOING UP"
+            }
+            if (fontPosition == 5)
+                clearInterval(timer1)
+        }
+
+        // var timer2 = setInterval(animateDecrease, 100)
+        // function animateDecrease() {
+        //     fontSize -=5
+        //     document.getElementById("text").style.fontSize = fontSize+"pt"
+        //     if (fontSize == 10)
+        //         clearInterval(timer2)
+        // }
+    }
+</script>
+<body onload="textAnimate1()">
+    <h1>Program to Increase or Decrease the Font Size</h1>
+    <p id="text"></p>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Program 4</title>
+
+    <script>
+        function myTask() {
+            var input = document.getElementById("myInput").value
+
+            if(isNaN(input)) {
+                findVowel(input)
+            }
+            else {
+                findReverse(input)
+                // isArmstrong(input)
+            }
+        }
+        
+        function findVowel(input) {
+            input = input.toLowerCase()
+            var position = 0
+            for(var i=0; i<input.length; i++) {
+                if(input[i]=='a' || input[i]=='e' || input[i]=='i' || input[i]=='o' || input[i]=='u') {
+                    position = i+1
+                    alert('The left most vowel is at index: '+position)
+                    break
+                }
+            }
+            if(position == 0)
+                alert('Vowel not found')
+        }
+        
+        function findReverse(input) {
+            // var res = 0 ;
+            // while(input!=0)
+            // {
+            //     var d = input%10 ;
+            //     res = res*10 + d ;
+            //     input = parseInt(input/10) ;
+            // }
+            var reverseInput = Math.sign(input) * parseInt(input.toString().split('').reverse().join(''))
+            alert('Original Number: '+input+'\nReversed Number: '+reverseInput)
+        }
+
+        function isArmstrong(input) {
+            var tempInput = input
+            var res = 0
+            var integerLength = input.toString().length
+            while(tempInput!=0) {
+                var rem = tempInput%10
+                res+=rem**integerLength
+                tempInput = parseInt(tempInput/10)
+            }
+            if(input == res)
+                alert("The number is an Armstrong Number")
+            else
+                alert("The number is not an Armstrong Number")
+        }
+    </script>
+    
+</head>
+<body>
+    <h1>Program to find the Left Most Vowel or the Reverse of a Number</h1>
+<!--      <form> action can be given as something like action = "main.html" if form fields are properly validated  -->
+<!--        <input type="text" placeholder="Enter a mobile number" pattern="[0-9]{10}" title="Invalid mobile number" required>-->
+    <input id="myInput" type="text" placeholder="Enter an input" required>
+    <input onclick="myTask()" type="submit">
+<!--    </form>-->
+</body>
+</html>

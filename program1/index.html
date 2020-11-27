@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Program 1</title>
+</head>
+<body>
+<!--<h1 align="center">Program to find the squares and cubes</h1>-->
+<script>
+    alert("Hi")
+    var proceed = confirm("Do you want to proceed?")
+    if(proceed) {
+        var lowerRange = prompt("Enter the lower range:")
+        var upperRange = prompt("Enter the upper range:")
+        var square = 0;
+        var cube = 0;
+        var myTable = "<h1 align=\"center\">Program to find the squares and cubes</h1>"
+        myTable = myTable+"<table align=\"center\" border=\"1\" width=\"40%\"><tr><th>Number</th><th>Square</th><th>Cube</th></tr>"
+        // can even copy paste by doing from html (ignore the extra \n and all)
+        for(var i=lowerRange;i<=upperRange;i++) { //parseInt(lowerRange)
+            square = i*i;
+            cube = i*i*i;
+            // document.write(square+" "+cube+"<br\>");
+            myTable = myTable+"<tr><td>"+i+"</td><td>"+square+"</td><td>"+cube+"</td></tr>"
+        }
+        myTable = myTable+"</table>"
+        document.write(myTable)
+    }
+    else {
+        document.write("<h1 align='center'>Thank you for visiting<h1/>")
+    }
+
+</script>
+
+
+<!--    <table border="2px" align="center" width="70%">-->
+<!--        <tr>-->
+<!--            <th>Column 1</th>-->
+<!--            <th>Column 2</th>-->
+<!--            <th>Column 3</th>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <th rowspan="2">Row 1 Cell 1</th>-->
+<!--            <th>Row 1 Cell 2</th>-->
+<!--            <th>Row 1 Cell 3</th>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <th>Row 2 Cell 2</th>-->
+<!--            <th>Row 2 Cell 3</th>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td colspan="3">Row 3 Cell 1</td>-->
+<!--        </tr>-->
+<!--    </table>-->
+</body>
+</html>

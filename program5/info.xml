@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/css" href="info.css" ?>
+<!DOCTYPE student_info [ <!-- DTD -->
+        <!ELEMENT student_info (h1,h2+,label+)> <!-- contains h1, one or more h2 and one or more label -->
+        <!ELEMENT h1 (#PCDATA)>
+        <!ELEMENT h2 (#PCDATA)>
+        <!ELEMENT label (#PCDATA|usn|name|college|branch|year_of_joining|email)*> <!-- usn or name or... zero or more times -->
+        <!ELEMENT usn (#PCDATA)>
+        <!ELEMENT name (#PCDATA)>
+        <!ELEMENT college (#PCDATA)>
+        <!ELEMENT branch (#PCDATA)>
+        <!ELEMENT year_of_joining (#PCDATA)>
+        <!ELEMENT email (#PCDATA)>
+        ]>
+<student_info>
+    <h1>Student Information</h1>
+    <h2>Student 1 Information</h2>
+    <label>USN: <usn>123</usn></label>
+    <label>Name: <name>abc</name></label>
+    <label>College: <college>sjec</college></label>
+    <label>Branch: <branch>cse</branch></label>
+    <label>Year of Joining: <year_of_joining>2019</year_of_joining></label>
+    <label>Email: <email>abc@gmail.com</email></label>
+    <h2>Student 2 Information</h2>
+    <label>USN: <usn>456</usn></label>
+    <label>Name: <name>dfg</name></label>
+    <label>College: <college>nitte</college></label>
+    <label>Branch: <branch>ece</branch></label>
+    <label>Year of Joining: <year_of_joining>2020</year_of_joining></label>
+    <label>Email: <email>dfgc@gmail.com</email></label>
+    <h2>Student 3 Information</h2>
+    <label>USN: <usn>789</usn></label>
+    <label>Name: <name>hij</name></label>
+    <label>College: <college>iit</college></label>
+    <label>Branch: <branch>me</branch></label>
+    <label>Year of Joining: <year_of_joining>2018</year_of_joining></label>
+    <label>Email: <email>hij@gmail.com</email></label>
+</student_info>
